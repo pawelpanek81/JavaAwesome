@@ -15,7 +15,7 @@ public class Main {
         Integer c = 128;
         Integer d = 128;
         System.out.println(c == d);
-
+//======================================================================================================================
         /* Trick 2 */
         String immutable = "lupa";
         System.out.println(immutable);
@@ -24,9 +24,15 @@ public class Main {
         char[] string = (char[]) f.get(immutable);
         string[0] = 'd';
         System.out.println(immutable);
-
-
+//======================================================================================================================
         /* Trick 3 */
+        if ((0.1 + 0.1) * 10 == 2)
+            System.out.println("(0.1 + 0.1) * 10 == 2 of course is true");
+
+        if ((0.1 + 0.1 + 0.1) * 10 != 3)
+            System.out.println("(0.1 + 0.1 + 0.1) * 10 != 3, why?");
+//======================================================================================================================
+        /* Trick 4 */
         //This method throw checked exception so we need to use try...catch
         try {
             throwException();
@@ -39,7 +45,6 @@ public class Main {
 
         //This method also throw checked exception and we don't have to handle the exception
         throwException2(new IOException());
-
     }
 
     static void throwException() throws IOException {
