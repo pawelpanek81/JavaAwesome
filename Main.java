@@ -23,7 +23,8 @@ public class Main {
         f.setAccessible(true);
         char[] string = (char[]) f.get(immutable);
         string[0] = 'd';
-        System.out.println(immutable);
+        System.out.println("lupa"); //this prints dupa
+        System.out.println(immutable); //this also
 //======================================================================================================================
         /* Trick 3 */
         if ((0.1 + 0.1) * 10 == 2)
@@ -33,6 +34,9 @@ public class Main {
             System.out.println("(0.1 + 0.1 + 0.1) * 10 != 3, why?");
 //======================================================================================================================
         /* Trick 4 */
+        // \u000d System.out.println("This Comment Executed!");
+//======================================================================================================================
+        /* Trick 5 */
         //This method throw checked exception so we need to use try...catch
         try {
             throwException();
@@ -45,6 +49,7 @@ public class Main {
 
         //This method also throw checked exception and we don't have to handle the exception
         throwException2(new IOException());
+
     }
 
     static void throwException() throws IOException {
